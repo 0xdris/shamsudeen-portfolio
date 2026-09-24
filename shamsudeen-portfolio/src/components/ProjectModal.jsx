@@ -194,6 +194,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
 
               {/* Action Buttons */}
               <div className="flex flex-wrap gap-4 pt-4 border-t border-border">
+                {project.liveDemo && (
                 <a
                   href={project.liveDemo}
                   target="_blank"
@@ -203,6 +204,8 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   <ExternalLink size={16} />
                   Live Demo
                 </a>
+                )}
+                {project.github && (
                 <a
                   href={project.github}
                   target="_blank"
@@ -212,6 +215,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   <SiGithub size={16} />
                   View Code
                 </a>
+                )}
               </div>
             </div>
           </motion.div>

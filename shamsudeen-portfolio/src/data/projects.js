@@ -20,8 +20,8 @@ export const projects = [
       "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=500&fit=crop",
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=500&fit=crop"
     ],
-    liveDemo: "https://example.com/real-estate",
-    github: "https://github.com/shamsudeen-idris/real-estate"
+    liveDemo: null,
+    github: null
   },
   {
     id: 2,
@@ -44,8 +44,8 @@ export const projects = [
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",
       "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=500&fit=crop"
     ],
-    liveDemo: "https://example.com/dashboard",
-    github: "https://github.com/shamsudeen-idris/user-dashboard"
+    liveDemo: null,
+    github: null
   },
   {
     id: 3,
@@ -69,8 +69,8 @@ export const projects = [
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=500&fit=crop",
       "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=500&fit=crop"
     ],
-    liveDemo: "https://example.com/image-slider",
-    github: "https://github.com/shamsudeen-idris/image-slider"
+    liveDemo: null,
+    github: null
   }
 ];
 

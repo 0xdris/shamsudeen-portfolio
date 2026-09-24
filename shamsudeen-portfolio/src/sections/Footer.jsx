@@ -11,7 +11,7 @@ const footerLinks = [
 ];
 
 const socialLinks = [
-  { icon: SiGithub, href: 'https://github.com/shamsudeen-idris', label: 'GitHub' },
+  { icon: SiGithub, href: 'https://github.com/0xdris', label: 'GitHub' },
   { icon: FaLinkedin, href: 'https://linkedin.com/in/shamsudeen-idris', label: 'LinkedIn' },
 ];
 
