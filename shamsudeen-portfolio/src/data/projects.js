@@ -47,6 +47,32 @@ export const projects = [
     ],
     liveDemo: null,
     github: "https://github.com/pinkberry527-sketch/ziba-real-estate-website"
+  },
+  {
+    id: 3,
+    title: "TechGadget Store",
+    shortDescription: "E-commerce store for tech gadgets with cart, user accounts and an admin panel.",
+    fullDescription: `A full-featured e-commerce web app for selling phones, headphones, smartwatches, laptops and accessories. Shoppers can browse the catalog, search and filter by category, and manage a shopping cart, while a role-protected admin panel lets store owners add, edit and delete products in real time. Built with vanilla JavaScript and Firebase, and deployed on Firebase Hosting.`,
+    problem: "Small online sellers need a fast, good-looking storefront they can manage themselves, without paying for a heavy e-commerce platform. The store had to let customers shop easily while giving the owner a simple, secure way to keep products up to date.",
+    features: [
+      "Product catalog with live search and category filters",
+      "Shopping cart with quantity controls, tax and order summary, saved in localStorage",
+      "Email/password sign-up, login and password reset with Firebase Authentication",
+      "Role-based admin panel protected by user roles, with a super admin who can promote other users",
+      "Full product management (create, edit, delete) synced in real time with Firebase Realtime Database",
+      "Product images added by URL or uploaded through the ImgBB API",
+      "Bulk product import pages for seeding the catalog",
+      "Responsive dark theme with smooth animations"
+    ],
+    challenges: "Securing the admin area without a custom backend: user roles are stored in Firebase Realtime Database and checked on every auth state change, so only admins can reach the admin panel and only the super admin can promote other users. Real-time listeners keep the catalog and admin list in sync the moment a product changes.",
+    techStack: ["HTML5", "CSS3", "JavaScript ES6+", "Firebase Auth", "Realtime Database", "Firebase Hosting"],
+    images: [
+      "/projects/ecommerce-1.jpg",
+      "/projects/ecommerce-2.jpg",
+      "/projects/ecommerce-3.jpg"
+    ],
+    liveDemo: "https://gadget-store-app-fb7c5.web.app",
+    github: null
   }
 ];
 
