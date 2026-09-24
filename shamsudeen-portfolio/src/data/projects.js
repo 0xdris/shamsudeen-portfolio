@@ -1,76 +1,52 @@
 export const projects = [
   {
     id: 1,
-    title: "Real Estate Website",
-    shortDescription: "Modern property listing platform with advanced search and filtering.",
-    fullDescription: `A comprehensive real estate platform designed to revolutionize property discovery. This application provides users with an intuitive interface to browse, search, and filter properties based on location, price range, property type, and amenities. The platform features a responsive design that works seamlessly across all devices, from mobile phones to desktop screens.`,
-    problem: "Traditional real estate websites often have cluttered interfaces, slow loading times, and poor mobile experiences. Finding the right property requires navigating through multiple pages and dealing with overwhelming amounts of information.",
+    title: "InvoiceFlow",
+    shortDescription: "Invoice generator for freelancers and SMEs with live preview and PDF export.",
+    fullDescription: `A professional invoice generator built for freelancers and small businesses. Users fill in their details, their client's details and a list of services, and a live preview of the invoice updates as they type. Finished invoices download as a clean A4 PDF in one click, and every invoice is saved to a local history so it can be reopened and reused later.`,
+    problem: "Freelancers and small businesses often build invoices by hand in word processors or pay for heavy accounting tools they don't need. They need a fast, free way to produce a professional-looking invoice and keep track of what they've sent.",
     features: [
-      "Advanced search with multiple filter criteria (location, price, bedrooms, bathrooms)",
-      "Interactive property cards with image galleries and key details",
-      "Responsive grid layout that adapts to all screen sizes",
-      "Smooth animations and transitions for enhanced UX",
-      "Property comparison functionality",
-      "Contact agent integration with form validation"
+      "Live invoice preview that updates as you type",
+      "Dynamic line items with automatic subtotal and total calculation",
+      "One-click PDF export sized for A4 paper",
+      "Invoice history saved in the browser with localStorage",
+      "Reload any past invoice back into the editor to reuse it",
+      "Multi-currency support, with Nigerian Naira (₦) as the default"
     ],
-    challenges: "Implementing efficient state management for complex filter combinations while maintaining smooth performance. Optimizing image loading for property galleries without compromising quality.",
-    techStack: ["React", "Tailwind CSS", "JavaScript ES6+", "Responsive Design"],
+    challenges: "Turning an on-screen React component into a sharp, correctly-proportioned PDF. The preview is captured with html2canvas at double resolution and scaled into an A4 page with jsPDF. Keeping the history in sync with localStorage without losing data on reload was solved with a custom useInvoiceHistory hook.",
+    techStack: ["React", "Tailwind CSS", "jsPDF", "html2canvas", "Local Storage", "Vite"],
     images: [
-      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=500&fit=crop"
+      "/projects/invoiceflow-2.jpg",
+      "/projects/invoiceflow-3.jpg",
+      "/projects/invoiceflow-1.jpg"
     ],
     liveDemo: null,
-    github: null
+    github: "https://github.com/0xdris/invoiceflow"
   },
   {
     id: 2,
-    title: "User Dashboard",
-    shortDescription: "Analytics dashboard with charts, stats, and data visualization.",
-    fullDescription: `A powerful analytics dashboard that transforms raw data into actionable insights. Built for data-driven decision making, this dashboard provides real-time visualization of key metrics through interactive charts, graphs, and statistical cards. The clean, modern interface ensures that complex data is presented in an easily digestible format.`,
-    problem: "Businesses struggle to make sense of large datasets. Existing dashboard solutions are often bloated, slow, and difficult to customize. Users need a lightweight, fast, and visually appealing way to track their metrics.",
+    title: "Ziba Real Estate",
+    shortDescription: "Lagos real estate platform with property listings, agent verification and an admin review queue.",
+    fullDescription: `A premium real estate platform for buying, leasing and short stays in Lagos. Visitors can search and filter listings and view full property details, while agents register, submit their documents for verification and manage their own listings from a dashboard. Admins approve agent applications from a review queue, and agents can add properties one at a time or in bulk from a CSV file.`,
+    problem: "Property seekers in Lagos face unverified agents, outdated listings and cluttered websites. The platform needed to build trust by verifying agents before they can list, while keeping browsing fast and simple for buyers and renters.",
     features: [
-      "Interactive charts with Chart.js for data visualization",
-      "Real-time stat cards with animated counters",
-      "Responsive sidebar navigation with collapsible menu",
-      "Dark/Light theme toggle",
-      "Data export functionality",
-      "Customizable widget layout"
+      "Property search and filtering by location, type, bedrooms, price, furnishing and more",
+      "Role-based sign-up for buyers/renters and agents/sellers",
+      "Agent verification flow with drag-and-drop document upload and a pending-approval screen",
+      "Admin review queue for approving agent applications",
+      "Agent dashboard to add, edit and remove property listings",
+      "Bulk property upload from CSV",
+      "Real-time listings, inquiries and reports powered by Firebase Firestore"
     ],
-    challenges: "Optimizing chart rendering performance with large datasets. Ensuring consistent data visualization across different screen sizes while maintaining interactivity.",
-    techStack: ["React", "Chart.js", "Tailwind CSS", "JavaScript ES6+", "Responsive Design"],
+    challenges: "Keeping the whole project on Firebase's free plan: instead of using Cloud Storage, profile photos and ID documents are compressed in the browser and stored as base64 text in Firestore. Real-time updates for listings and the admin queue use Firestore snapshot listeners.",
+    techStack: ["HTML5", "CSS3", "JavaScript ES6+", "Firebase Auth", "Firestore", "Vercel"],
     images: [
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=500&fit=crop"
+      "/projects/ziba-1.jpg",
+      "/projects/ziba-3.jpg",
+      "/projects/ziba-2.jpg"
     ],
     liveDemo: null,
-    github: null
-  },
-  {
-    id: 3,
-    title: "Image Slider Project",
-    shortDescription: "Responsive image carousel with autoplay and navigation controls.",
-    fullDescription: `A feature-rich image carousel component built from scratch with React. This slider supports autoplay, manual navigation, touch/swipe gestures on mobile, and smooth CSS transitions. It's designed to be easily integrated into any React application as a reusable component with customizable settings.`,
-    problem: "Most carousel libraries are heavy, have limited customization options, or don't support modern React patterns. Developers need a lightweight, customizable slider that works reliably across all devices.",
-    features: [
-      "Autoplay with configurable interval and pause on hover",
-      "Touch/swipe support for mobile devices",
-      "Keyboard navigation support (arrow keys)",
-      "Smooth CSS transitions with multiple animation types",
-      "Dot indicators and arrow navigation controls",
-      "Responsive design with adaptive image sizing",
-      "Infinite loop option"
-    ],
-    challenges: "Handling edge cases in touch gestures and ensuring smooth transitions without jank. Implementing proper cleanup for autoplay timers to prevent memory leaks.",
-    techStack: ["React", "CSS3 Animations", "JavaScript ES6+", "Touch Events"],
-    images: [
-      "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=500&fit=crop"
-    ],
-    liveDemo: null,
-    github: null
+    github: "https://github.com/pinkberry527-sketch/ziba-real-estate-website"
   }
 ];
 
