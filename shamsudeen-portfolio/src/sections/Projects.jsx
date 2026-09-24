@@ -138,6 +138,7 @@ const ProjectCard = ({ project, index, onViewDetails }) => {
             <Eye size={16} />
             View Details
           </motion.button>
+          {project.liveDemo && (
           <motion.a
             href={project.liveDemo}
             target="_blank"
@@ -149,6 +150,8 @@ const ProjectCard = ({ project, index, onViewDetails }) => {
             <ExternalLink size={16} />
             Live Demo
           </motion.a>
+          )}
+          {project.github && (
           <motion.a
             href={project.github}
             target="_blank"
@@ -160,6 +163,7 @@ const ProjectCard = ({ project, index, onViewDetails }) => {
           >
             <SiGithub size={18} />
           </motion.a>
+          )}
         </div>
       </div>
     </motion.div>
